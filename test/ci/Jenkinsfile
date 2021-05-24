@@ -13,17 +13,16 @@ pipeline {
     }
     
 	stages {
-       
-        stage('Checkout SCM') {
-            steps{
-                sh '''#!/bin/bash
-                    uname -a
-                    mkdir artifacts
-                    git clone -b ${GITLAB_BRANCH} --single-branch https://github.com/intel/ocm.git
-                    rm -rf ./ocm/.git
-                '''
-            }
-    	}
+            stage('Checkout SCM') {
+               steps{
+                   sh '''#!/bin/bash
+                      uname -a
+                      mkdir artifacts
+                      git clone -b ${GITLAB_BRANCH} --single-branch https://github.com/intel/ocm.git
+                      rm -rf ./ocm/.git
+                   '''
+                }
+    	    }
     	
         stage('Scan: Checkmarx') {
             steps{
