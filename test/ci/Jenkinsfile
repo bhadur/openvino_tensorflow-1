@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-          label 'EdgeCSP_01'
+          label 'master'
         }
     }
     
@@ -151,4 +151,5 @@ pipeline {
         '''
 		}
     }
+  }
 }
