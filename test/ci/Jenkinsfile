@@ -27,7 +27,7 @@ pipeline {
     	
         stage('Scan: Checkmarx') {
             steps{
-                echo "Executing Checkmarx Jenkins Plugin to request a Scan..."
+                echo "Executing Checkmarx Jenkins Plugin to request a Scan"
                 step([$class: 'CxScanBuilder', comment: '', credentialsId: 'Checkmarx', excludeFolders: '', exclusionsSetting: 'global', failBuildOnNewResults: false, failBuildOnNewSeverity: 'HIGH', filterPattern: '''!**/_cvs/**/*, !**/.svn/**/*,   !**/.hg/**/*,   !**/.git/**/*,  !**/.bzr/**/*, !**/bin/**/*,
 !**/obj/**/*,  !**/backup/**/*, !**/.idea/**/*, !**/*.DS_Store, !**/*.ipr,     !**/*.iws,
 !**/*.bak,     !**/*.tmp,       !**/*.aac,      !**/*.aif,      !**/*.iff,     !**/*.m3u, !**/*.mid, !**/*.mp3,
