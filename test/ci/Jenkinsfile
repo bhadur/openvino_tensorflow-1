@@ -18,8 +18,8 @@ pipeline {
                    sh '''#!/bin/bash
                       uname -a
                       mkdir artifacts
-                      git clone -b ${GITLAB_BRANCH} --single-branch https://github.com/intel/ocm.git
-                      rm -rf ./ocm/.git
+                      git clone https://github.com/bhadur/openvino_tensorflow-1.git
+                      
                    '''
                 }
     	    }
